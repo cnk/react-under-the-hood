@@ -21,6 +21,7 @@ let Game = React.createClass({
                    ship={ship}
                    updateDestination={this.updateDestination} />
         <HelmControl ship={ship}
+                     starData={starData}
                      updateDestination={this.updateDestination}
                      updateShipInfo={this.updateShipInfo}
                      updateSpeed={this.updateSpeed}

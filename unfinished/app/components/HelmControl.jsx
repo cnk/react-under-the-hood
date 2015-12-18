@@ -1,5 +1,6 @@
 let React = require('react');
 let ShipInfo = require('./ShipInfo.jsx');
+let CourseControl = require('./CourseControl.jsx');
 let NavigationalDashboard = require('./NavigationalDashboard.jsx');
 let WarpDriveControls = require('./WarpDriveControls.jsx');
 
@@ -14,6 +15,8 @@ let HelmControl = React.createClass({
         </div>
         <ShipInfo info={ship.info} updateShipInfo={this.props.updateShipInfo} />
         <NavigationalDashboard ship={ship} />
+        <CourseControl starData={this.props.starData}
+                       updateDestination={this.props.updateDestination} />
         <WarpDriveControls speed={ship.speed}
                            updateSpeed={this.props.updateSpeed}
                            engageWarpDrive={this.props.engageWarpDrive} />
